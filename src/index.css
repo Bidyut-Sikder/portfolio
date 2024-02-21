@@ -123,11 +123,15 @@ about  css
   /* color: #ababab; */
 }
 .about-description{
-  font-size: 16px;
+  font-size: 15px;
   font-family: roboto;
 font-weight: 400;
 color: rgb(145 146 149)!important;
-line-height: 17px;
+line-height: 18px;
+}
+.about-description span{
+/* background-color: rgb(25, 43, 212); */
+color: #FFFF;
 }
 .text-text {
   color: rgb(145 146 149/var(--tw-text-opacity))!important;

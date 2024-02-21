@@ -107,7 +107,7 @@ const AboutArea = () => {
                                     Team lead at StartApp LLC.
                                 </li>
                                 <li>
-                                    <span>2017-2021</span> <br />
+                                    <span>2022-2023</span> <br />
                                     UX/UI Design Executive at Coin Digital LTD.
                                 </li>
                             </ul>

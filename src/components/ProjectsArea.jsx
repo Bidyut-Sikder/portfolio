@@ -17,7 +17,7 @@ const ProjectsArea = () => {
 
               </div>
               <p>
-               This web store is created using React.js.It is hosted on vercel  and uses firebase for authentication.
+               This web store is created using React.js.It is hosted on vercel  and used firebase for authentication.
                 
               </p>
 

@@ -63,12 +63,12 @@ const AboutArea = () => {
                     <div className="about-col-2">
                         <h1 className="sub-title">Bidyut Sikder</h1>
                         <h2 className="title">Full Stack Developer</h2> <br />
-
-                        <p className='about-description' >I am a full stack developer with hands on experience in building web
-                            applications using MERN stack, NodeJS, Express and ReactJS. I have also
-                            worked with databases like MongoDB and MySQL. My expertise includes designing
+                       <p className='about-description' >I am a full stack developer with hands on experience in building web
+                            applications using <span>MERN</span> stack,<span>NodeJS</span>  ,<span>Express.JS</span>  and <span>React.JS</span>  . I have also
+                            worked with databases like <span>MongoDB</span> and  <span>MySQL</span>. My expertise includes designing
                             responsive user interfaces, developing server side logic, working with APIs,
-                            managing project workflows, writing clean and efficient code.</p>
+                            managing project workflows, writing clean and efficient code.
+                        </p>
                       
                         <div className="tab-titles">
                             <p className={`tab-links ${activeLinkskill ? 'active-link' : ''}`} onClick={skills}>

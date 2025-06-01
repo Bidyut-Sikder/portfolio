@@ -3,7 +3,7 @@ name: Deploy Vite App to AWS S3
 on:
   push:
     branches:
-      - main # Change to your deploy branch if different
+      - main # or your deploy branch
 
 jobs:
   build-and-deploy:
@@ -22,7 +22,8 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8 # Use your preferred pnpm version
+          version: 8 # use your pnpm version
+          run_install: false # we’ll run install separately
 
       - name: Install dependencies
         run: pnpm install

@@ -17,21 +17,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'pnpm'
 
-      - name: Install pnpm manually
-        run: npm install -g pnpm
-
-      - name: Verify pnpm installation
-        run: |
-          which pnpm
-          pnpm -v
+      - name: Install pnpm locally
+        run: npm install pnpm
 
       - name: Install dependencies
-        run: pnpm install
+        run: npx pnpm install
 
       - name: Build project
-        run: pnpm run build
+        run: npx pnpm run build
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
@@ -44,7 +38,7 @@ jobs:
         run: aws s3 sync dist/ s3://${{ secrets.S3_BUCKET_NAME }} --delete
 
       - name: Invalidate CloudFront cache (optional)
-
+      
         run: |
           aws cloudfront create-invalidation \
             --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \

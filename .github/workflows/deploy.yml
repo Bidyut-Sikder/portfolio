@@ -6,26 +6,27 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  release:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - uses: pnpm/action-setup@v4
+
+      - name: Use Node LTS ✨
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: lts/*
+          registry-url: https://registry.npmjs.org
+          cache: pnpm
 
-      - name: Install pnpm locally
-        run: npm install pnpm
+      - name: Install dependencies 📦️
+        run: pnpm install --frozen-lockfile
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Build 🔨
+        run: pnpm build
 
-      - name: Build project
-        run: pnpm run build
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2

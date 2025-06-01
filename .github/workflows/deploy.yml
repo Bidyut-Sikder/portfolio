@@ -30,6 +30,10 @@ jobs:
       - name: Build 🔨
         run: pnpm build
 
+      - name: Copy sitemap.xml and robots.txt into dist/ 📄
+        run: |
+          cp sitemap.xml dist/ || echo "No sitemap.xml found"
+          cp robots.txt dist/ || echo "No robots.txt found"
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2

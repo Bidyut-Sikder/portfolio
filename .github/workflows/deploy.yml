@@ -23,13 +23,7 @@ jobs:
           registry-url: https://registry.npmjs.org
           cache: pnpm
 
-      - name: Debug workspace files
-        run: |
-          echo "Listing files:"
-          ls -la
-          echo "Searching for lockfile:"
-          find . -name "pnpm-lock.yaml"
-          
+      
       - name: Install dependencies 📦️
         run: pnpm install --prefer-frozen-lockfile
 
